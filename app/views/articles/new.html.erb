@@ -1,4 +1,15 @@
+<body bgcolor = "#C0C0C0">
+
 <h1>Create new article</h1>
+
+<% if @article.errors.any? %>
+    <h2>The following errors prevended article from being save</h2>    
+    <ul>
+        <% @article.errors.full_messages.each do |msg|%>
+            <FONT COLOR="#ff0000"><li><%= msg%></li></FONT>
+        <% end %>
+    </ul>    
+<% end %>
 
 <%= form_with scope: :article, url: articles_path, local: true do |f|%>
     <p>
@@ -13,3 +24,4 @@
         <%= f.submit%>
     </p>
 <%end%>
+</body>
