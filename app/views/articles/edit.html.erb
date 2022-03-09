@@ -21,7 +21,9 @@
         <%= f.text_area :description%>
     </p>
     <p>
-        <%= f.submit%>
+        <%= f.submit%> |
+        <%= link_to "Cancel", articles_path(@articles)%>
+
     </p>
 <%end%>
 </body>

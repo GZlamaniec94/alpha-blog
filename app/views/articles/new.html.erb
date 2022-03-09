@@ -21,7 +21,8 @@
         <%= f.text_area :description%>
     </p>
     <p>
-        <%= f.submit%>
+        <%= f.submit%> |
+        <%= link_to "Back", articles_path(@articles)%>
     </p>
 <%end%>
 </body>
