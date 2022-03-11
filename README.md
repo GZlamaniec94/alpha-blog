@@ -22,5 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<p>
+        <strong> <%= f.label :title %></strong><br/>
+        <%= f.text_field :title%>
+    </p>
+    <p>
+        <strong><%= f.label :description%></strong><br/>
+        <%= f.text_area :description%>
+    </p>
+    <p>
+        <%= f.submit%> |
+        <%= link_to "Back", articles_path(@articles)%>
 
+    </p>
 

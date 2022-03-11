@@ -1,24 +1,37 @@
-<% if @article.errors.any? %>
-    <h2>The following errors prevended article from being save</h2>    
-    <ul>
-        <% @article.errors.full_messages.each do |msg|%>
-            <FONT COLOR="#ff0000"><li><%= msg%></li></FONT>
-        <% end %>
-    </ul>    
-<% end %>
 
-<%= form_with(model: @article, local: true) do |f|%>
-    <p>
-        <strong> <%= f.label :title %></strong><br/>
-        <%= f.text_field :title%>
-    </p>
-    <p>
-        <strong><%= f.label :description%></strong><br/>
-        <%= f.text_area :description%>
-    </p>
-    <p>
-        <%= f.submit%> |
-        <%= link_to "Back", articles_path(@articles)%>
 
-    </p>
-<%end%>
+<div class="container bg-info ">
+    <% if @article.errors.any? %>
+        <h2>The following errors prevended article from being save</h2>    
+        <ul>
+            <% @article.errors.full_messages.each do |msg|%>
+                <FONT COLOR="#ff0000"><li><%= msg%></li></FONT>
+            <% end %>
+        </ul>    
+    <% end %>
+
+    <%= form_with(model: @article, local: true) do |f|%>
+        <div class="form_group row">
+            <%= f.label :title, class: "col-2 col-form-label mt-3" %>
+            <div class="col-10">
+                <%= f.text_field :title, class: "form-control mt-3 mr-3" %>
+            </div>     
+        </div>
+        <div class="form_group row">
+            <%= f.label :description, class: "col-2 col-form-label mt-3" %>
+            <div class="col-10">
+                <%= f.text_area :description, rows: 10, class: "form-control mt-3" %>
+            </div>        
+        </div>    
+
+            <div class="card-body">
+            <%= link_to "Back", articles_path(@articles),data: { confirm: "Your article will be not saved!"}, class: " btn btn-outline-danger btn-lg "%>
+            <%= f.submit class:"btn btn-outline-light btn-lg right "%>
+            </div>   
+                        
+          
+        
+    <%end%>
+
+    
+</div>
