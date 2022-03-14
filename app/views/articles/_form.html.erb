@@ -1,27 +1,22 @@
 
 
-<div class="container bg-info shadow-lg p-3 mb-5 rounded ">
-    <% if @article.errors.any? %>
-        <h2>The following errors prevended article from being save</h2>    
-        <ul>
-            <% @article.errors.full_messages.each do |msg|%>
-                <FONT COLOR="#ff0000"><li><%= msg%></li></FONT>
-            <% end %>
-        </ul>    
-    <% end %>
 
+<%= render 'shared/errors' %>
+<div class="container bg-info shadow-lg p-3 mb-5 rounded">
+    
     <%= form_with(model: @article, local: true) do |f|%>
-        
+      
         <div class="form_group row">
-            <%= f.label :title, class: "col-2 col-form-label mt-3" %>
+            
+            <%= f.label :title, class: "col-2 col-form-label mt-3 text-light" %>
             <div class="col-10">
-                <%= f.text_field :title, class: "form-control mt-3 mr-3" %>
+                <%= f.text_field :title, class: "form-control mt-3 mr-3 shadow-lg rounded", placeholder: "Title of article" %>
             </div>         
             
         
-            <%= f.label :description, class: "col-2 col-form-label mt-3" %>
+            <%= f.label :description, class: "col-2 col-form-label mt-3 text-light" %>
             <div class="col-10">
-                <%= f.text_area :description, rows: 10, class: "form-control mt-3" %>
+                <%= f.text_area :description, rows: 10, class: "form-control mt-3 shadow-lg rounded", placeholder: " Description of article" %>
             </div>        
         </div>    
 
