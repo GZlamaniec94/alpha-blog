@@ -1,6 +1,6 @@
 
 
-<div class="container bg-info ">
+<div class="container bg-info shadow-lg p-3 mb-5 rounded ">
     <% if @article.errors.any? %>
         <h2>The following errors prevended article from being save</h2>    
         <ul>
@@ -11,25 +11,25 @@
     <% end %>
 
     <%= form_with(model: @article, local: true) do |f|%>
+        
         <div class="form_group row">
             <%= f.label :title, class: "col-2 col-form-label mt-3" %>
             <div class="col-10">
                 <%= f.text_field :title, class: "form-control mt-3 mr-3" %>
-            </div>     
-        </div>
-        <div class="form_group row">
+            </div>         
+            
+        
             <%= f.label :description, class: "col-2 col-form-label mt-3" %>
             <div class="col-10">
                 <%= f.text_area :description, rows: 10, class: "form-control mt-3" %>
             </div>        
         </div>    
 
-            <div class="card-body">
+        <div class="card-body">
             <%= link_to "Back", articles_path(@articles),data: { confirm: "Your article will be not saved!"}, class: " btn btn-outline-danger btn-lg "%>
             <%= f.submit class:"btn btn-outline-light btn-lg right "%>
-            </div>   
-                        
-          
+        </div>                       
+     
         
     <%end%>
 
