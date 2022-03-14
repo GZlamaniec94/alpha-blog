@@ -1,26 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blog website enabling for user to create articles.
 
-Things you may want to cover:
+* Ruby v3.1.1
 
-* Ruby version
+* Rails 6.1.4.6
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+* Sqlite3 database
 
