@@ -13,7 +13,7 @@
         
             <%= f.label :email, class: "col-2 col-form-label mt-3 text-light" %>
             <div class="col-10">
-                <%= f.email_field :email, class: "form-control mt-3 shadow-lg rounded", placeholder: "Enter your emial" %>
+                <%= f.email_field :email, class: "form-control mt-3 shadow-lg rounded", placeholder: "Enter your email" %>
             </div>
 
             <%= f.label :password, class: "col-2 col-form-label mt-3 text-light" %>
@@ -24,7 +24,7 @@
 
         <div class="card-body">
             <%= link_to "Back", root_path, data: { confirm: "Your account will be not created!"}, class: " btn btn-outline-danger btn-lg "%>
-            <%= f.submit class:"btn btn-outline-light btn-lg right "%>
+            <%= f.submit "Sign up", class:"btn btn-outline-light btn-lg right " %>
         </div>                       
      
         
