@@ -24,7 +24,7 @@
 
         <div class="card-body">
             <%= link_to "Back", root_path, data: { confirm: "Your account will be not created!"}, class: " btn btn-outline-danger btn-lg "%>
-            <%= f.submit "Sign up", class:"btn btn-outline-light btn-lg right " %>
+            <%= f.submit(@user.new_record? ? "Sign up" : "Update" , class:"btn btn-outline-light btn-lg right " ) %>
         </div>                       
      
         
