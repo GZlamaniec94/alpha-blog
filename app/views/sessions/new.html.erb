@@ -1,0 +1,29 @@
+<h1 class="text-center mt-3">Log in</h1>
+
+<div class="container bg-info shadow-lg p-3 mb-5 rounded">
+    
+    <%= form_with(scope: :session, url: login_path, local: true) do |f|%>
+      
+        <div class="form_group row">
+              
+            <%= f.label :email, class: "col-2 col-form-label mt-3 text-light" %>
+            <div class="col-10">
+                <%= f.email_field :email, class: "form-control mt-3 shadow-lg rounded", placeholder: "Enter your email" %>
+            </div>
+
+            <%= f.label :password, class: "col-2 col-form-label mt-3 text-light" %>
+            <div class="col-10">
+                <%= f.password_field :password, class: "form-control mt-3 shadow-lg rounded", placeholder: "Enter your password" %>
+            </div>        
+        </div>    
+
+        <div class="card-body">
+            <%= link_to "Back", root_path, data: { confirm: "You will be not logged!"}, class: " btn btn-outline-danger btn-lg "%>
+            <%= f.submit "Log in", class:"btn btn-outline-light btn-lg right " %>
+        </div>                       
+     
+        
+    <%end%>
+
+    
+</div>
