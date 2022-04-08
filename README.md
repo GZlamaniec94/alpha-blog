@@ -8,3 +8,10 @@ Blog website enabling for user to create articles.
 
 * Sqlite3 database
 
+* You can create your account and log in.
+* When logged in, you can create articles, edit and delete them.
+* You can edit your account and delete it.
+ 
+* Account can be admin.
+* Admin can create articles, but also can edit and delete other user's articles.
+* Amin can delete other user's account.
