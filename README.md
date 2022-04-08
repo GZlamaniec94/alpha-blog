@@ -1,5 +1,8 @@
 # README
 
+You can see my blog by opening link below:
+https://alpha-blog-gz.herokuapp.com/
+
 Blog website enabling for user to create articles.
 
 * Ruby v3.1.1
