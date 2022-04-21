@@ -1,0 +1,8 @@
+<h1 class="text-center mt-3">Categories</h1>
+<div class="flickr_pagination mt-3">
+    <%= will_paginate @categories, :container => false %>
+</div>
+<%=  render 'category' %>
+<div class="flickr_pagination mb-3">
+    <%= will_paginate @categories, :container => false %>
+</div>
