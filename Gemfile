@@ -60,3 +60,5 @@ gem 'tzinfo-data'
 gem 'rack-cache', '~> 1.13'
 
 gem 'net-smtp', require: false
+
+gem 'rails_12factor'
