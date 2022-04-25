@@ -14,7 +14,12 @@
                             <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?"} , class: "btn btn-outline-danger"%>                            
                         <% end %>
                     </div>
-                <div class="card-footer text-muted">
+                 <% if @article.categories.any? %>
+                        <div class="card-footer text-muted">  
+                            <%= render @article.categories %>
+                        </div>
+                <% end %>      
+                <div class="card-footer text-muted">                  
                     <small>Created <%= time_ago_in_words(@article.created_at) %> ago, 
                         edited <%= time_ago_in_words(@article.updated_at) %> ago.
                     </small>
@@ -23,7 +28,6 @@
         </div>    
     </div>
 </div>
-
 
 
 
