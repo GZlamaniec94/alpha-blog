@@ -14,7 +14,13 @@
             <%= f.label :description, class: "col-2 col-form-label mt-3 text-light" %>
             <div class="col-10">
                 <%= f.text_area :description, rows: 10, class: "form-control mt-3 shadow-lg rounded", placeholder: " Description of article" %>
-            </div>        
+            </div>      
+            
+            <%= f.label :category, class: "col-2 col-form-label mt-3 text-light" %>
+            <div class="col-4 mt-4">
+                <%= f.collection_select(:category_ids, Category.all, :id,  :name, 
+                    {:prompt => "Select one or more (can be blank)"}, { multiple: true, size: 3, class: "custom-select shadow-lg rounded"}) %>
+            </div>   
         </div>    
 
         <div class="card-body">
