@@ -25,6 +25,20 @@ class CategoriesController < ApplicationController
             render 'new'
         end 
     end   
+
+    def edit
+        @category = Category.find(params[:id])
+    end
+    
+    def update
+        @category = Category.find(params[:id])
+        if @category.update(category_params)
+            flash[:notice] = "Category name updated successfully"
+            redirect_to @category
+        else
+            render 'edit'
+        end         
+    end    
     
     private
 
@@ -34,7 +48,7 @@ class CategoriesController < ApplicationController
 
     def require_admin
         if !(logged_in? && current_user.admin?)
-            flash[:alert] = "You cannot create category"
+            flash[:alert] = "Only admins can do that"
             redirect_to categories_path
         end    
     end   

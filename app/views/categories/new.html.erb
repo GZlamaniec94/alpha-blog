@@ -1,26 +1,2 @@
 <h1 class="text-center mt-3">Create a new category</h1>
-<%= render 'shared/errors', obj: @category %>
-<div class="container bg-info shadow-lg p-3 rounded" id='new-category-container'>
-    
-    <%= form_with(model: @category, local: true) do |f|%>
-      
-        <div class="form_group row">
-            
-            <%= f.label :name, "Name" ,class: "col-2 col-form-label mt-3 text-light" %>
-            <div class="col-9">
-                <%= f.text_field :name, class: "form-control mt-3 mr-3 shadow-lg rounded", placeholder: "Enter a name" %>
-            </div>   
-        
-            
-        </div>    
-
-        <div class="card-body">
-            <%= link_to "Back", categories_path, data: { confirm: "Your category will be not created!"}, class: " btn btn-outline-danger btn-lg "%>
-            <%= f.submit class:"btn btn-outline-light btn-lg right " %>
-        </div>                       
-     
-        
-    <%end%>
-
-    
-</div>
+<%= render 'form' %>
